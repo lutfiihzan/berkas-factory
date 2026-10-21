@@ -5,3 +5,8 @@ deploy/.env.deploy
 
 # gambar promosi hasil skrip
 threads-assets/
+
+# tidak ikut repositori
+deploy/
+PRD.md
+threads-post.txt
