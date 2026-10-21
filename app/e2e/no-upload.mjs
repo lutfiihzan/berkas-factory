@@ -87,6 +87,8 @@ const browser = await chromium.launch({ executablePath: browserPath, headless: t
 const results = []
 for (const t of await buildTools()) {
   const ctx = await browser.newContext({ acceptDownloads: true })
+  // Pengunjung yang sudah memilih di banner cookie ('essential' = tanpa cache offline), agar banner tidak menutupi tombol
+  await ctx.addInitScript(() => { try { localStorage.setItem('bf-consent', 'essential') } catch {} })
   const page = await ctx.newPage()
   const violations = []
   const consoleErrors = []

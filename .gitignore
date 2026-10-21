@@ -1,1 +1,7 @@
 .claude/
+
+# kredensial deploy (jangan di-commit)
+deploy/.env.deploy
+
+# gambar promosi hasil skrip
+threads-assets/

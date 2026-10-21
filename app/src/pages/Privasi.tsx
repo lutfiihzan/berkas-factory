@@ -22,9 +22,13 @@ export default function Privasi() {
       <h2 className={h2}>Yang tersimpan di perangkatmu</h2>
       <ul className={ul}>
         <li>Tombol "Kabari aku" menyimpan satu penanda (<code className="rounded bg-navy-50 px-1.5 py-0.5 text-sm text-navy-800">notify = 1</code>) di localStorage browsermu, supaya tombolnya tahu kamu sudah menekannya. Penanda ini tidak dikirim ke mana pun.</li>
-        <li>Di versi produksi, service worker menyimpan kode aplikasi (halaman, skrip, font) di cache browser supaya bisa dipakai offline setelah kunjungan pertama. Yang di-cache hanya berkas aplikasi, bukan file milikmu. Tidak ada cookie, dan isi file tidak pernah ditulis ke localStorage.</li>
+        <li>Pilihanmu di banner cookie (<code className="rounded bg-navy-50 px-1.5 py-0.5 text-sm text-navy-800">bf-consent</code>) dan catatan waktu kirim masukan terakhir (<code className="rounded bg-navy-50 px-1.5 py-0.5 text-sm text-navy-800">bf-feedback</code>, dipakai sebagai batas anti-spam). Keduanya hanya di browsermu.</li>
+        <li>Kalau kamu memilih <strong>Terima</strong> di banner cookie, di versi produksi service worker menyimpan kode aplikasi, model OCR dan hapus background, serta data bahasa di cache browser supaya bisa dipakai offline. Yang di-cache hanya berkas aplikasi, bukan file milikmu. Kalau kamu memilih <strong>Hanya yang perlu</strong>, cache offline tidak diaktifkan dan yang sudah ada dihapus.</li>
+        <li>Tidak ada cookie pelacak dan tidak ada iklan. Isi file tidak pernah ditulis ke localStorage.</li>
       </ul>
-      <p className={p}>Kamu bisa menghapus penanda itu kapan saja lewat pengaturan data situs di browser.</p>
+      <p className={p}>
+        Kamu bisa mengubah pilihan itu kapan saja lewat tautan "Pengaturan cookie" di bagian bawah halaman, atau menghapus data situs di pengaturan browser.
+      </p>
 
       <h2 className={h2}>Analitik</h2>
       <p className={p}>
@@ -33,7 +37,7 @@ export default function Privasi() {
 
       <h2 className={h2}>Form masukan</h2>
       <p className={p}>
-        Yang terkirim hanya teks yang kamu ketik di form: jenis masukan, pesan, dan email kalau kamu mau mengisinya (opsional). File tidak ikut. Saat ini form membuka aplikasi emailmu dengan pesan yang sudah terisi (mailto), jadi kamu bisa membaca dan mengubahnya sebelum mengirim.
+        Tombol "Kasih masukan" membuka WhatsApp dengan pesan yang sudah terisi. Yang ikut hanya teks yang kamu ketik, jenis masukan, dan alamat halaman yang sedang kamu buka (misalnya /gabung-pdf). Nama dan isi file tidak ikut. Kamu bisa membaca dan mengubah pesannya di WhatsApp sebelum menekan kirim. Setelah itu pesannya berada di WhatsApp, jadi tunduk pada kebijakan privasi WhatsApp, termasuk nomor teleponmu yang akan terlihat oleh kami. Untuk mengurangi spam, form punya jeda antar kirim dan batas per jam yang dicatat di browsermu.
       </p>
 
       <h2 className={h2}>Buktikan sendiri</h2>

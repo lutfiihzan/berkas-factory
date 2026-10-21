@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 
-// TODO: ganti dengan domain asli sebelum rilis. Samakan dengan SITE di scripts/gen-sitemap.mjs.
-export const SITE_URL = 'https://berkasfactory.example'
+// Domain produksi. Samakan dengan SITE di scripts/gen-sitemap.mjs.
+export const SITE_URL = 'https://tools.senikode.com'
 
 interface SeoInput {
   title: string

@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 import './index.css'
 import App from './App'
+import { applyConsent } from './lib/consent'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -12,8 +13,5 @@ createRoot(document.getElementById('root')!).render(
   </StrictMode>,
 )
 
-if (import.meta.env.PROD && 'serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js').catch(() => {})
-  })
-}
+// Cache offline (service worker) hanya aktif setelah pengguna memilih "Terima" di banner cookie.
+applyConsent()

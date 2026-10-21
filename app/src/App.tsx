@@ -2,6 +2,7 @@ import { Suspense } from 'react'
 import { Link, Route, Routes, useParams } from 'react-router-dom'
 import { findTool } from './registry'
 import FeedbackButton from './components/FeedbackButton'
+import ConsentBanner from './components/ConsentBanner'
 import CommandPalette from './components/CommandPalette'
 import Header from './components/shell/Header'
 import Home from './pages/Home'
@@ -63,6 +64,7 @@ export default function App() {
         <Route path="/:slug" element={<ToolRoute />} />
       </Routes>
       <FeedbackButton />
+      <ConsentBanner />
       <CommandPalette />
       <OfflineBadge />
     </>

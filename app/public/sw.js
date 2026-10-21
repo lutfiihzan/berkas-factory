@@ -1,5 +1,5 @@
 // Service worker BerkasFactory: offline setelah kunjungan pertama.
-const VERSION = 'v2'
+const VERSION = 'v3'
 const SHELL = `bf-shell-${VERSION}`
 const RUNTIME = `bf-runtime-${VERSION}`
 const PRECACHE = ['/', '/index.html', '/favicon.svg', '/icon.svg', '/manifest.webmanifest']

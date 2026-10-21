@@ -6,7 +6,7 @@ export const faq: [string, string][] = [
   ['Bisa ubah Word/Excel jadi PDF?', 'Belum. Hasilnya di browser belum cukup rapi untuk kami rilis. Kalau sudah, kami kabari di sini.'],
   ['Kalau tab ditutup, filenya hilang?', 'Ya, dan itu disengaja. Tidak ada yang tersimpan. Unduh hasilnya sebelum menutup tab.'],
   ['Bisa dipakai di HP?', 'Bisa, tapi file besar lebih nyaman di laptop.'],
-  ['Mau request tool atau lapor bug, ke mana?', 'Klik "Kasih masukan" di pojok kanan bawah. Yang terkirim cuma tulisanmu, bukan filenya. Tool yang banyak diminta naik ke daftar kerja.'],
+  ['Mau request tool atau lapor bug, ke mana?', 'Klik bubble hijau "Kasih masukan" di pojok kanan bawah, tulis pesanmu, lalu lanjut lewat WhatsApp. Yang terkirim cuma tulisanmu dan alamat halaman, bukan filenya. Tool yang banyak diminta naik ke daftar kerja.'],
 ]
 
 export default function Faq() {

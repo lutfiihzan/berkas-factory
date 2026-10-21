@@ -9,6 +9,7 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "sitemap": "node scripts/gen-sitemap.mjs",
+    "icons": "node scripts/gen-icons.mjs",
     "assets:ocr": "node scripts/copy-ocr-assets.mjs",
     "assets:ort": "node scripts/copy-ort-assets.mjs",
     "test:privacy": "node e2e/no-upload.mjs"

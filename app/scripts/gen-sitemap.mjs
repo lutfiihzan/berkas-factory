@@ -1,8 +1,8 @@
 // Membaca slug dari src/tools/*/manifest.ts, menulis public/sitemap.xml.
 import { readdirSync, readFileSync, writeFileSync } from 'node:fs'
 
-// TODO: ganti dengan domain asli (samakan dengan SITE_URL di src/lib/seo.ts).
-const SITE = 'https://berkasfactory.example'
+// Samakan dengan SITE_URL di src/lib/seo.ts.
+const SITE = 'https://tools.senikode.com'
 
 const urls = ['/']
 for (const d of readdirSync('src/tools', { withFileTypes: true })) {

@@ -58,6 +58,7 @@ export function Footer() {
         <a href="/#cara-kerja" className="hover:text-white hover:underline">Cara kerja</a>
         <a href="/#faq" className="hover:text-white hover:underline">FAQ</a>
         <button onClick={() => window.dispatchEvent(new Event('open-feedback'))} className="hover:text-white hover:underline">Kasih masukan</button>
+        <button onClick={() => window.dispatchEvent(new Event('open-consent'))} className="hover:text-white hover:underline">Pengaturan cookie</button>
       </nav>
       <p className="mt-5">Dibuat supaya filemu tetap milikmu.</p>
       <p className="mt-1 text-navy-400">BerkasFactory &middot; {new Date().getFullYear()}</p>

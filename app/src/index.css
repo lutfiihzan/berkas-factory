@@ -21,6 +21,11 @@
   --color-accent-400: #ffc233;
   --color-accent-500: #ffb020;
 
+  /* Hijau WhatsApp untuk bubble chat masukan */
+  --color-wa-500: #25d366;
+  --color-wa-600: #1ebe5b;
+  --color-wa-700: #128c7e;
+
   /* Warna kategori ikon tool (gaya iLovePDF: tiap kelompok punya warna) */
   --color-cat-organize: #6366f1;
   --color-cat-optimize: #10b981;
