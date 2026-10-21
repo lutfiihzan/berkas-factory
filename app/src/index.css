@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+/* Tema navy BerkasFactory. Semua warna UI memakai token ini (jangan hardcode hex di komponen). */
+@theme {
+  --color-navy-50: #f2f5fb;
+  --color-navy-100: #e4eaf6;
+  --color-navy-200: #c9d5ec;
+  --color-navy-300: #a3b6da;
+  --color-navy-400: #6f89bf;
+  --color-navy-500: #43609f;
+  --color-navy-600: #2c478a;
+  --color-navy-700: #1e3571;
+  --color-navy-800: #14275a;
+  --color-navy-900: #0b1b45;
+  --color-navy-950: #071230;
+
+  /* Aksen: biru terang untuk tombol utama, kuning untuk sorotan/badge */
+  --color-brand-500: #2f6bff;
+  --color-brand-600: #2257e6;
+  --color-brand-700: #1b46bd;
+  --color-accent-400: #ffc233;
+  --color-accent-500: #ffb020;
+
+  /* Warna kategori ikon tool (gaya iLovePDF: tiap kelompok punya warna) */
+  --color-cat-organize: #6366f1;
+  --color-cat-optimize: #10b981;
+  --color-cat-convert: #f59e0b;
+  --color-cat-edit: #ec4899;
+  --color-cat-security: #0ea5e9;
+  --color-cat-image: #f43f5e;
+  --color-cat-file: #64748b;
+
+  --font-sans: ui-sans-serif, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --shadow-card: 0 1px 2px rgb(11 27 69 / 0.06), 0 4px 16px rgb(11 27 69 / 0.06);
+  --shadow-card-hover: 0 2px 4px rgb(11 27 69 / 0.08), 0 10px 28px rgb(11 27 69 / 0.12);
+}
+
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-navy-50 font-sans text-navy-900 antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

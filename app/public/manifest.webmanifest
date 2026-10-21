@@ -1,0 +1,15 @@
+{
+  "name": "BerkasFactory",
+  "short_name": "BerkasFactory",
+  "description": "Alat berkas yang jalan di browsermu. Filemu nggak ke mana-mana.",
+  "lang": "id",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#863bff",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
+  ]
+}

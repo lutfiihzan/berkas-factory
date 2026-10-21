@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: ganti domain saat rilis
+Sitemap: https://berkasfactory.example/sitemap.xml

@@ -1,0 +1,25 @@
+/* Animasi khusus halaman tool. Warna lewat token tema, gerak dihormati reduced-motion (lihat index.css). */
+@keyframes bf-shimmer {
+  from { background-position: -200% 0; }
+  to { background-position: 200% 0; }
+}
+@keyframes bf-indet {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(260%); }
+}
+@keyframes bf-breathe {
+  0%, 100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--color-brand-500) 30%, transparent); }
+  50% { box-shadow: 0 0 0 12px color-mix(in srgb, var(--color-brand-500) 0%, transparent); }
+}
+.bf-shimmer {
+  background-image: linear-gradient(100deg, var(--color-brand-600) 0%, var(--color-brand-500) 30%, var(--color-navy-300) 50%, var(--color-brand-500) 70%, var(--color-brand-600) 100%);
+  background-size: 200% 100%;
+  animation: bf-shimmer 2.4s linear infinite;
+}
+.bf-indet { animation: bf-indet 1.3s ease-in-out infinite; }
+.bf-breathe { animation: bf-breathe 1.4s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .bf-shimmer { animation: none; }
+  .bf-indet { animation: none; transform: translateX(80%); }
+  .bf-breathe { animation: none; }
+}
