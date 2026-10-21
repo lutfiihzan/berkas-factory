@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 export function Bulk() {
@@ -12,9 +11,9 @@ export function Bulk() {
           </svg>
         </span>
         <div>
-          <h2 className="text-xl font-bold text-navy-900">Banyak file sekaligus</h2>
+          <h2 className="text-xl font-bold text-navy-900">Satu folder, banyak file</h2>
           <p className="mt-1 text-navy-700">
-            Punya satu folder penuh? Masukkan semuanya, atur antreannya, lalu biarkan browsermu mengerjakan satu per satu. Tetap di perangkatmu.
+            Tarik satu folder atau puluhan file sekaligus. Hasilnya bisa diunduh sebagai satu ZIP, dan kalau satu file gagal, yang lain tetap jalan.
           </p>
         </div>
       </div>
@@ -23,26 +22,19 @@ export function Bulk() {
 }
 
 export function Kitchen() {
-  const [ok, setOk] = useState(() => {
-    try { return localStorage.getItem('notify') === '1' } catch { return false }
-  })
-  const mark = () => {
-    try { localStorage.setItem('notify', '1') } catch { /* abaikan */ }
-    setOk(true)
-  }
   return (
     <section className="bg-navy-50 px-4 py-12 sm:py-16">
       <div className="mx-auto max-w-3xl rounded-3xl border-2 border-dashed border-navy-300 p-6 text-center sm:p-10">
-        <h2 className="text-3xl font-bold tracking-tight text-navy-900">Masih di dapur</h2>
+        <h2 className="text-3xl font-bold tracking-tight text-navy-900">Lini produksi berikutnya</h2>
         <p className="mx-auto mt-3 max-w-2xl text-navy-700">
-          Daftar tool-nya bakal nambah terus. Yang lagi dikerjain: <strong>Repair file</strong> (PDF yang nggak mau kebuka, kita coba selamatkan), <strong>Hapus background</strong> foto, dan alat-alat gambar lain. Semuanya tetap jalan di browser.
+          Tiga tool terbaru (<strong>hapus background</strong>, <strong>OCR</strong>, <strong>perbaiki file</strong>) masih berlabel Lab: jalan, tapi belum semulus yang lain. Berikutnya mungkin tanda tangan PDF atau sensor teks. Kamu yang menentukan.
         </p>
+        {/* Membuka bubble WhatsApp; jenis "Request tool" sudah terpilih secara bawaan */}
         <button
-          onClick={mark}
-          disabled={ok}
-          className="mt-6 rounded-xl bg-brand-500 px-6 py-3 font-semibold text-white hover:bg-brand-600 disabled:bg-navy-200 disabled:text-navy-700"
+          onClick={() => window.dispatchEvent(new Event('open-feedback'))}
+          className="mt-6 rounded-xl bg-brand-500 px-6 py-3 font-semibold text-white transition hover:bg-brand-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
         >
-          {ok ? 'Oke, dicatat di perangkatmu' : 'Kabari aku'}
+          Request tool
         </button>
       </div>
     </section>

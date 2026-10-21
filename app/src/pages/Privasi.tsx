@@ -21,7 +21,6 @@ export default function Privasi() {
 
       <h2 className={h2}>Yang tersimpan di perangkatmu</h2>
       <ul className={ul}>
-        <li>Tombol "Kabari aku" menyimpan satu penanda (<code className="rounded bg-navy-50 px-1.5 py-0.5 text-sm text-navy-800">notify = 1</code>) di localStorage browsermu, supaya tombolnya tahu kamu sudah menekannya. Penanda ini tidak dikirim ke mana pun.</li>
         <li>Pilihanmu di banner cookie (<code className="rounded bg-navy-50 px-1.5 py-0.5 text-sm text-navy-800">bf-consent</code>) dan catatan waktu kirim masukan terakhir (<code className="rounded bg-navy-50 px-1.5 py-0.5 text-sm text-navy-800">bf-feedback</code>, dipakai sebagai batas anti-spam). Keduanya hanya di browsermu.</li>
         <li>Kalau kamu memilih <strong>Terima</strong> di banner cookie, di versi produksi service worker menyimpan kode aplikasi, model OCR dan hapus background, serta data bahasa di cache browser supaya bisa dipakai offline. Yang di-cache hanya berkas aplikasi, bukan file milikmu. Kalau kamu memilih <strong>Hanya yang perlu</strong>, cache offline tidak diaktifkan dan yang sudah ada dihapus.</li>
         <li>Tidak ada cookie pelacak dan tidak ada iklan. Isi file tidak pernah ditulis ke localStorage.</li>
